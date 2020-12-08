@@ -1,0 +1,9 @@
+{% section 'product-template' %}
+{% section 'product-recommendations' %}
+
+<script type="application/json" id="ccProductJson-{{ product.id }}">
+  {{ product | json }}
+</script>
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% render 'structured-data-product', product: product, current_variant: current_variant %}

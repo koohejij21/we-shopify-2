@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="{{ shop.locale }}">
+<head>
+  <!-- Canopy 2.11.14 -->
+
+  <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
+  {% render 'head-tag' %}
+
+  <meta name="theme-color" content="{{ settings.feature_col }}">
+
+  <title>
+  {{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tagged' | t }} "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% render 'social-meta-tags' %}
+
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
+
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', '');
+    window.theme = window.theme || {};
+    theme.money_format = {{ shop.money_format | json }};
+    theme.customerIsLoggedIn = {% if shop.customer_accounts_enabled and customer %}true{% else %}false{% endif %};
+    theme.shippingCalcMoneyFormat = {{ shop.money_with_currency_format | json }};
+    theme.cartType = {{ settings.cart_type | json }};
+
+    theme.strings = {
+      previous: {{ 'general.accessibility_labels.previous' | t | json }},
+      next: {{ 'general.accessibility_labels.next' | t | json }},
+      close: {{ 'general.accessibility_labels.close' | t | json }},
+      addressError: {{ 'map.errors.address_error' | t | json }},
+      addressNoResults: {{ 'map.errors.address_no_results' | t | json }},
+      addressQueryLimit: {{ 'map.errors.address_query_limit_html' | t | json }},
+      authError: {{ 'map.errors.auth_error' | t | json }},
+      shippingCalcSubmitButton: {{ 'cart.shipping_calculator.submit' | t | json }},
+      shippingCalcSubmitButtonDisabled: {{ 'cart.shipping_calculator.loading' | t | json }},
+      infiniteScrollLoadingImg: {{ 'loading.gif' | asset_url | json }},
+      infiniteScrollCollectionLoading: {{ 'collections.infinite_scroll.loading' | t | json }},
+      infiniteScrollCollectionFinishedMsg : {{ 'collections.infinite_scroll.no_more' | t | json }},
+      infiniteScrollBlogLoading: {{ 'blogs.infinite_scroll.loading' | t | json }},
+      infiniteScrollBlogFinishedMsg : {{ 'blogs.infinite_scroll.no_more' | t | json }},
+      blogsShowTags: {{ 'blogs.general.show_tags' | t | json }},
+      priceNonExistent: {{ 'products.variant.non_existent' | t | json }},
+      buttonDefault: {{ 'products.product.add_to_cart' | t | json }},
+      buttonNoStock: {{ 'products.variant.out_of_stock' | t | json }},
+      buttonNoVariant: {{ 'products.variant.non_existent' | t | json }},
+      unitPriceSeparator: {{ 'products.product.unit_price_separator' | t | json }},
+      onlyXLeft: {{ 'products.labels.only_x_left' | t: quantity: "[[ quantity ]]" | json }},
+      productAddingToCart: {{ 'products.product.adding_to_cart' | t | json }},
+      productAddedToCart: {{ 'products.product.added_to_cart_btn' | t | json }},
+      quickbuyAdded: {{ 'products.general.quick_buy_added' | t | json }},
+      cartSummary: {{ 'layout.cart_summary.cart' | t | json }},
+      cartContinue: {{ 'cart.general.continue' | t | json }},
+      colorBoxPrevious: {{ 'products.gallery.previous' | t | json }},
+      colorBoxNext: {{ 'products.gallery.next' | t | json }},
+      colorBoxClose: {{ 'products.gallery.close' | t | json }},
+      imageSlider: {{ 'general.slider.images' | t | json }}
+    };
+
+    theme.routes = {
+      root_url: '{{ routes.root_url }}',
+      account_url: '{{ routes.account_url }}',
+      account_login_url: '{{ routes.account_login_url }}',
+      account_logout_url: '{{ routes.account_logout_url }}',
+      account_recover_url: '{{ routes.account_recover_url }}',
+      account_register_url: '{{ routes.account_register_url }}',
+      account_addresses_url: '{{ routes.account_addresses_url }}',
+      collections_url: '{{ routes.collections_url }}',
+      all_products_collection_url: '{{ routes.all_products_collection_url }}',
+      search_url: '{{ routes.search_url }}',
+      cart_url: '{{ routes.cart_url }}',
+      cart_add_url: '{{ routes.cart_add_url }}',
+      cart_change_url: '{{ routes.cart_change_url }}',
+      cart_clear_url: '{{ routes.cart_clear_url }}'
+    };
+
+    theme.scripts = {
+        masonry: {{ 'masonry.v3.2.2.min.js' | asset_url | json }},
+        jqueryInfiniteScroll: {{ 'jquery.infinitescroll.2.1.0.min.js' | asset_url | json }},
+        underscore: {{ '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js' | json }},
+        shopifyCommon: {{ 'shopify_common.js' | shopify_asset_url | json }},
+        jqueryCart: {{ 'shipping-calculator.v1.0.min.js' | asset_url | json }}
+    };
+  </script>
+
+  {{ content_for_header }}
+
+  <script>
+    Shopify.money_format = {{ shop.money_format | json }};
+  </script>
+</head>
+
+<body class="template-{{ template.name }} {% if template.suffix != blank %}template-sfx-{{ template.suffix }}{% endif %} {% if template.directory != blank %}template-dir-{{ template.directory }}{% endif %}">
+  <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
+
+  {% section 'cart-drawer' %}
+
+  <div id="page-wrap">
+    <div id="page-wrap-inner">
+      <a id="page-overlay" href="#" aria-controls="mobile-nav" aria-label="{{ 'layout.header.close_mobile_nav_aria_label' | t | escape }}"></a>
+
+      <div id="page-wrap-content">
+        {% section 'header' %}
+
+        <main id="content" role="main">
+          {{ content_for_layout }}
+        </main>
+      </div><!-- /#page-wrap-content -->
+
+      {% section 'footer' %}
+    </div>
+  </div><!-- /#page-wrap -->
+
+  <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+  {% render 'body-end-tag' %}
+</body>
+</html>
