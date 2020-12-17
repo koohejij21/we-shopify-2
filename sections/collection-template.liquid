@@ -46,10 +46,10 @@
 
     <div class="collection-header {{ section.settings.header_mode }} {% if section.settings.header_height_fixed %}collection-header--fixed-height{% endif %} {% if collection.image %}has-image{% endif %} handle-{{ collection.handle }}">
       <div class="header-text align-{{ section.settings.header_align }} {% unless section.settings.header_mode contains 'coloured-split' or section.settings.header_align == 'left' %}reading-column{% endunless %}">
-        <h1 class="page-title">{{ collection.title }}</h1>
+        <h1 class="page-title tb-title-collection">{{ collection.title }}</h1>
 
         {% if collection.description != "" %}
-        <div class="rte">{{ collection.description }}</div>
+        <div class="rte tb-bodyhtml-collection">{{ collection.description }}</div>
         {% endif %}
       </div>
 
@@ -75,7 +75,8 @@
       {% endif %}
     </div>
 
-    <div id="collection" class="{% if section.settings.sidebar_show %}show-sidebar{% endif %}">
+    <div id="collection" class="{% if section.settings.sidebar_show %}show-sidebar__{% endif %}">
+      {% comment %}
       {% if section.settings.show_collection_tags and section.settings.collection_tags == 'boxes' %}
       {% assign has_tags = false %}
       {% capture tags_html %}
@@ -92,10 +93,11 @@
       </ul>
       {% endcapture %}{% if has_tags %}{{ tags_html }}{% endif %}
       {% endif %}
+      {% endcomment %}
 
       <div class="inline-row inline-row--spaced">
         <div class="inline-item right last">
-          <span class="results-count desktop">{{ 'collections.general.results' | t: count: collection.products_count }}</span>
+          {% comment %}<span class="results-count desktop">{{ 'collections.general.results' | t: count: collection.products_count }}</span>{% endcomment %}
 
           {% if section.settings.show_collection_tags and section.settings.collection_tags == 'dropdown' %}
           {% if collection.url.size == 0 %}
@@ -105,6 +107,7 @@
           {% endif %}
           {% assign has_tags = false %}
           {% capture tags_html %}
+          {% comment %}
           <span class="tags filter">
             <label for="filter-by">{{ 'collections.general.filter_by' | t }}:</label>
             <select id="filter-by" class="redirect">
@@ -117,13 +120,14 @@
               {% endfor %}
             </select>
           </span>
+          {% endcomment %}
           {% endcapture %}{% if has_tags %}{{ tags_html }}{% endif %}
           {% endif %}
 
           {% if section.settings.collection_sort and collection.products_count > 0 %}
           <span class="filter">
             <label for="sort-by">{{ 'collections.sorting.title' | t }}:</label>
-            <select id="sort-by" class="sort-by" data-default-value="{{ collection.sort_by | default: collection.default_sort_by  }}">
+            <select id="sort-by__" class="sort-by tb-sortby" data-default-value="{{ collection.sort_by | default: collection.default_sort_by  }}">
               {% if section.settings.collection_sort_show_featured %}<option value="manual">{{ 'collections.sorting.featured' | t }}</option>{% endif %}
               <option value="best-selling">{{ 'collections.sorting.best_selling' | t }}</option>
               <option value="price-ascending">{{ 'collections.sorting.price_ascending' | t }}</option>
@@ -139,6 +143,7 @@
       </div>
 
       {% if section.settings.sidebar_show %}
+      {% comment%}
       <div class="sidebar-cont cf">
         <div class="sidebar">
           <h2 class="h4">{{ 'collections.sidebar.title' | t }}</h2>
@@ -165,8 +170,20 @@
         </div>
 
         <div class="beside-sidebar">
+         {% endcomment%}
           {% endif %}
+          
+          <div class="tb-collection-search">
+                <input type="text" id="tb-input-collection-search" placeholder="Search" data-handle="q" autocomplete="off" />
+                <button class="tb-button-collection-search" type="button">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 37 40"><path d="M35.6 36l-9.8-9.8c4.1-5.4 3.6-13.2-1.3-18.1-5.4-5.4-14.2-5.4-19.7 0-5.4 5.4-5.4 14.2 0 19.7 2.6 2.6 6.1 4.1 9.8 4.1 3 0 5.9-1 8.3-2.8l9.8 9.8c.4.4.9.6 1.4.6s1-.2 1.4-.6c.9-.9.9-2.1.1-2.9zm-20.9-8.2c-2.6 0-5.1-1-7-2.9-3.9-3.9-3.9-10.1 0-14C9.6 9 12.2 8 14.7 8s5.1 1 7 2.9c3.9 3.9 3.9 10.1 0 14-1.9 1.9-4.4 2.9-7 2.9z"></path></svg>
+                  <span class="icon__fallback-text">Submit</span>
+                </button>
+          </div>
+          {% include 'apolomultimedia-filter' %}
+          <div style="clear: both;"></div>
 
+          {% comment %}
           {% if collection.products.size > 0 %}
           <div class="product-list product-grid row grid {% if section.settings.coll_infiniscroll %}use-infinite-scroll{% endif %}" data-normheights=".image" data-normheights-inner="img">
             {% capture product_blocks %}
@@ -188,14 +205,16 @@
           {% else %}
           <p>{{ 'collections.general.empty' | t }}</p>
           {% endif %}
-
+		  {% endcomment %}
+          {% comment %}
           {% if section.settings.sidebar_show %}
         </div>
       </div>
       {% endif %}
+      {% endcomment %}
     </div>
   </div>
-
+  {% comment %}
   {% if paginate.pages > 1 %}
   <div class="border-top">
     <div class="container">
@@ -206,7 +225,7 @@
     </div>
   </div>
   {% endif %}
-
+  {% endcomment %}
   {% endpaginate %}
 </div>
 

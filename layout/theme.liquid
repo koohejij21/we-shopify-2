@@ -115,5 +115,7 @@
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
   {% render 'body-end-tag' %}
+{% include 'tb-turbo' %}
+{{ 'customiser-turbo.css' | asset_url | stylesheet_tag }}
 </body>
 </html>
