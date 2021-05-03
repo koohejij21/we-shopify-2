@@ -452,45 +452,45 @@ td {
 #cboxTopLeft {
   width: 25px;
   height: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border1.png?v=11343687497165923865) no-repeat 0 0;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border1.png?v=11343687497165923865) no-repeat 0 0;
 }
 
 #cboxTopCenter {
   height: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border1.png?v=11343687497165923865) repeat-x 0 -50px;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border1.png?v=11343687497165923865) repeat-x 0 -50px;
 }
 
 #cboxTopRight {
   width: 25px;
   height: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border1.png?v=11343687497165923865) no-repeat -25px 0;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border1.png?v=11343687497165923865) no-repeat -25px 0;
 }
 
 #cboxBottomLeft {
   width: 25px;
   height: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border1.png?v=11343687497165923865) no-repeat 0 -25px;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border1.png?v=11343687497165923865) no-repeat 0 -25px;
 }
 
 #cboxBottomCenter {
   height: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border1.png?v=11343687497165923865) repeat-x 0 -75px;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border1.png?v=11343687497165923865) repeat-x 0 -75px;
 }
 
 #cboxBottomRight {
   width: 25px;
   height: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border1.png?v=11343687497165923865) no-repeat -25px -25px;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border1.png?v=11343687497165923865) no-repeat -25px -25px;
 }
 
 #cboxMiddleLeft {
   width: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border2.png?v=14280315166769838715) repeat-y 0 0;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border2.png?v=14280315166769838715) repeat-y 0 0;
 }
 
 #cboxMiddleRight {
   width: 25px;
-  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/cbox_border2.png?v=14280315166769838715) repeat-y -25px 0;
+  background: url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/cbox_border2.png?v=14280315166769838715) repeat-y -25px 0;
 }
 
 #cboxContent {
@@ -529,7 +529,7 @@ td {
 }
 
 #cboxLoadingOverlay {
-  background: #fff url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/loading.gif?v=11567851211075092210) no-repeat center 50px;
+  background: #fff url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/loading.gif?v=11567851211075092210) no-repeat center 50px;
 }
 
 #cboxClose, #cboxNext, #cboxPrevious, #cboxSlideshow {
@@ -735,7 +735,7 @@ td {
 }
 
 .slick-loading .slick-list {
-  background: #fff url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/7/assets/loading.gif?v=11567851211075092210) center center no-repeat;
+  background: #fff url(//cdn.shopify.com/s/files/1/0501/4254/4067/t/8/assets/loading.gif?v=11567851211075092210) center center no-repeat;
 }
 
 /* Slider Arrows */
@@ -7981,16 +7981,5 @@ html.template-password #password-login .password-owner {
 }
 
 /*************    ---                   ---                   ---   *************/
-/*************    |     code to fix image styling on collection pages       |   *************/
-/*************    ---                  /pages/wakeboarding-collection, etc.                   ---   *************/
-
-.collection-header .split-image {
- height: 100%;
-}
-
-.collection-header .split-image img {
- height: 100%;
- width: 100%;
- object-fit: cover;
-}
-
+/*************    |     ENTER YOUR CUSTOM CODE BELOW HERE       |   *************/
+/*************    ---                   ---                   ---   *************/

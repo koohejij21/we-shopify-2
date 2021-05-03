@@ -15,7 +15,6 @@
   {% render 'social-meta-tags' %}
 
   {{ 'styles.css' | asset_url | stylesheet_tag }}
-  {{ 'custom.css' | asset_url | stylesheet_tag }}
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', '');
@@ -89,6 +88,9 @@
   <script>
     Shopify.money_format = {{ shop.money_format | json }};
   </script>
+  
+  <meta name="google-site-verification" content="nhmbSIvR84uQK82J-Goa0SnHXq3vmr3eL13IxyL_tIg" />
+  
 </head>
 
 <body class="template-{{ template.name }} {% if template.suffix != blank %}template-sfx-{{ template.suffix }}{% endif %} {% if template.directory != blank %}template-dir-{{ template.directory }}{% endif %}">
@@ -116,21 +118,5 @@
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
   {% render 'body-end-tag' %}
-{% include 'tb-turbo' %}
-{{ 'customiser-turbo.css' | asset_url | stylesheet_tag }}
-  
-  <script>
-    let urrl = location.href;
-var src;
-if (urrl.indexOf('/collections/shop-by-brand-baja-marine') != -1){
-src="https://cdn.shopify.com/s/files/1/0501/4254/4067/files/Baja_Logo_Orange_Black-01.png?v=1608698069";
-}else if(urrl.indexOf('/collections/shop-by-brand-fountain-powerboats') != -1){
-src="https://cdn.shopify.com/s/files/1/0501/4254/4067/files/FountainPowerBoats.png?v=1608698061";
-}else if(urrl.indexOf('/collections/shop-by-brand-donzi-marine') != -1){
-src="https://cdn.shopify.com/s/files/1/0501/4254/4067/files/donzi.png?v=1608698060";
-}
-$('.logo.align-center a img, a.compact-logo img').attr('src', src);
-$('.logo.align-center a img, a.compact-logo img').css('display', 'block');
-  </script>
 </body>
 </html>
