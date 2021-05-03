@@ -67,8 +67,8 @@ File structure:
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.1d581f6d4bf1a97f4cbc0b88b933bc136d38d178.woff2?h1=d2FrZWVmZmVjdHMuY29t&hmac=ff960f912f06f7be4fbb40b431d6816533b2168a8da799c4ee538f01a37ece7e") format("woff2"),
-       url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.cfce41a967758ce5a9b7d48daeb5b028fd977a9b.woff?h1=d2FrZWVmZmVjdHMuY29t&hmac=26f39df292f957ea686edf2ce842fc6bf4124141f21d99e7a11bd4099e06ec47") format("woff");
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.1d581f6d4bf1a97f4cbc0b88b933bc136d38d178.woff2?&hmac=b59fde63ef4778517ca8e872395c570039764aca6853b730acbc758c376d9202") format("woff2"),
+       url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.cfce41a967758ce5a9b7d48daeb5b028fd977a9b.woff?&hmac=b6cef1bb12cdc3d77c249b06c507efafbf638d8f03ecf504ea0cef6a2e187c1b") format("woff");
 }
 
 @font-face {
@@ -76,8 +76,8 @@ File structure:
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n7.c496e9cf2031deec4c4bca338faa81971c8631d4.woff2?h1=d2FrZWVmZmVjdHMuY29t&hmac=f380b61ecc1430c8f0327f045107fa4ce12806b698ae783fdfc9c72741c1e273") format("woff2"),
-       url("https://fonts.shopifycdn.com/montserrat/montserrat_n7.78b0223375c94b39ce1af7e09a0225f2bb3d05f7.woff?h1=d2FrZWVmZmVjdHMuY29t&hmac=63d6d6856ad638121d7d73d8094faf239b2ff3ef7f425bc5529f626a61ee1b01") format("woff");
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n7.c496e9cf2031deec4c4bca338faa81971c8631d4.woff2?&hmac=b9a918bf2f468523f460d46c1177ce19f91e4e2d2e985e9790e19f7a38d94a90") format("woff2"),
+       url("https://fonts.shopifycdn.com/montserrat/montserrat_n7.78b0223375c94b39ce1af7e09a0225f2bb3d05f7.woff?&hmac=8239ed8fbc7d038e4f5187456563d0dfae3f53b3737d96c3d6b510d70dafb13d") format("woff");
 }
 
 @font-face {
@@ -85,8 +85,8 @@ File structure:
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_i4.ae02483b3d5e8777d0d4a4ccf396482c364d8955.woff2?h1=d2FrZWVmZmVjdHMuY29t&hmac=ed031c618327e7e22a15b6c1a2b7ac9e0fe25fe19eb14abeeac60bf30ec4f61c") format("woff2"),
-       url("https://fonts.shopifycdn.com/montserrat/montserrat_i4.ba28d1a04ec09448de486d83c63235903dfc0af8.woff?h1=d2FrZWVmZmVjdHMuY29t&hmac=fc3a09d0dee19cae66b73a69963f13660e269ba05e9c4dff7f123ef0239a2c93") format("woff");
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_i4.ae02483b3d5e8777d0d4a4ccf396482c364d8955.woff2?&hmac=ebefd90d220fc27200c2ff0a0ea8ceafc305c30201bed645828f38bf763fb2d1") format("woff2"),
+       url("https://fonts.shopifycdn.com/montserrat/montserrat_i4.ba28d1a04ec09448de486d83c63235903dfc0af8.woff?&hmac=688a7ef7a7097cf112968b8cf8c9d19e3979c75b87027853f31be902aae935c0") format("woff");
 }
 
 @font-face {
@@ -94,8 +94,8 @@ File structure:
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_i7.83866c3eec90071fa974c17980ffb42977f9e667.woff2?h1=d2FrZWVmZmVjdHMuY29t&hmac=e68492d2a36f68d172a42c86963290088fc424bcefd5a9b48f859a646f5c1afa") format("woff2"),
-       url("https://fonts.shopifycdn.com/montserrat/montserrat_i7.25524241b12d864609c85325613d60efcf1a87e3.woff?h1=d2FrZWVmZmVjdHMuY29t&hmac=7f4da9086cd753c580a1d6ae487428405cba7895453d51b6d9bf9b157c692213") format("woff");
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_i7.83866c3eec90071fa974c17980ffb42977f9e667.woff2?&hmac=49e2f753aa1bbed2499a3208c3f2e6969080a740e643ad544e4e9d95dbdd13a9") format("woff2"),
+       url("https://fonts.shopifycdn.com/montserrat/montserrat_i7.25524241b12d864609c85325613d60efcf1a87e3.woff?&hmac=52d5d1f52cacaac04dec2f10df0bcaeec767bd41569a43d36480d4a16030455d") format("woff");
 }
 
 @font-face {
@@ -103,8 +103,8 @@ File structure:
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.9c88796e9511a086b9c0038824e3fcaa4e104f7d.woff2?h1=d2FrZWVmZmVjdHMuY29t&hmac=b0db0f5b6800577a494ea5201e1077c58c097540775df2e59807cc2e474889b5") format("woff2"),
-       url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.bfbdd76b5b769e73488b72ad922937634199bb91.woff?h1=d2FrZWVmZmVjdHMuY29t&hmac=0ce6ff82d62aaa535b8c77410a2bf9ede447dd49151a8a3a752196415bc2744c") format("woff");
+  src: url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.9c88796e9511a086b9c0038824e3fcaa4e104f7d.woff2?&hmac=3ed9b017b9784efe5d0ba5d3291b64cb547a095dc7e44ba45c6e39ad548a0606") format("woff2"),
+       url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.bfbdd76b5b769e73488b72ad922937634199bb91.woff?&hmac=c07f7f99e250620aa35b117d45ba709a301488bdb3d7954ff1549c3eec2f05a1") format("woff");
 }
 
 @font-face {
@@ -112,8 +112,8 @@ File structure:
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.e72d00d31ae5399d260a80ec70322c62c1819762.woff2?h1=d2FrZWVmZmVjdHMuY29t&hmac=0675466fce9bfb0243324dcfce703d13338a07fe29b033e73e14d89610e3f1f5") format("woff2"),
-       url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.18a018b6c83e89030c5d70a6d4c02c969f228500.woff?h1=d2FrZWVmZmVjdHMuY29t&hmac=24529a2a4065188c5581388bfbea04213b025ed4b644e63e1c085ae3f32a1d20") format("woff");
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.e72d00d31ae5399d260a80ec70322c62c1819762.woff2?&hmac=a51355a3cbe15aebc1c1554760a284fd97876d256948d4151d76b08cd7a65c73") format("woff2"),
+       url("https://fonts.shopifycdn.com/montserrat/montserrat_n5.18a018b6c83e89030c5d70a6d4c02c969f228500.woff?&hmac=1f425240c6882b6b59bf030962238f189bee59b0451390685d40a5a2eb939f4b") format("woff");
 }
 
 @font-face {
@@ -121,8 +121,8 @@ File structure:
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.9c88796e9511a086b9c0038824e3fcaa4e104f7d.woff2?h1=d2FrZWVmZmVjdHMuY29t&hmac=b0db0f5b6800577a494ea5201e1077c58c097540775df2e59807cc2e474889b5") format("woff2"),
-       url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.bfbdd76b5b769e73488b72ad922937634199bb91.woff?h1=d2FrZWVmZmVjdHMuY29t&hmac=0ce6ff82d62aaa535b8c77410a2bf9ede447dd49151a8a3a752196415bc2744c") format("woff");
+  src: url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.9c88796e9511a086b9c0038824e3fcaa4e104f7d.woff2?&hmac=3ed9b017b9784efe5d0ba5d3291b64cb547a095dc7e44ba45c6e39ad548a0606") format("woff2"),
+       url("https://fonts.shopifycdn.com/century_gothic/centurygothic_n7.bfbdd76b5b769e73488b72ad922937634199bb91.woff?&hmac=c07f7f99e250620aa35b117d45ba709a301488bdb3d7954ff1549c3eec2f05a1") format("woff");
 }
 
 /* Misc */
